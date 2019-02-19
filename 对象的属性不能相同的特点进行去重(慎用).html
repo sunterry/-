@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+	var arr = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, null,null, NaN, NaN,'NaN', 0, 0, 'a', 'a',{},{}];
+
+    function unique(arr) {
+        if (!Array.isArray(arr)) {
+            return
+        }
+        var array= [];
+        var obj = {};
+        for (var i = 0; i < arr.length; i++) {
+            if (!obj[arr[i]]) {
+	            array.push(arr[i])
+                obj[arr[i]] = 1
+            } else {
+                obj[arr[i]]++
+            }
+        }
+        return array;
+    }
+
+    console.log(unique(arr))
+</script>
+</body>
+</html>

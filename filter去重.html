@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+	var arr = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, null,null, NaN, NaN,'NaN', 0, 0, 'a', 'a',{},{}];
+
+    function unique(arr) {
+	    //当前元素，在原始数组中的第一个索引==当前索引值，否则返回当前元素
+      return arr.filter((item, index, arr) => arr.indexOf(item, 0) === index);
+    }
+
+    console.log(unique(arr));
+</script>
+</body>
+</html>

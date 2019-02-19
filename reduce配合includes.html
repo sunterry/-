@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+	var arr = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, null,null, NaN, NaN,'NaN', 0, 0, 'a', 'a',{},{}];
+
+    function unique(arr){
+        return arr.reduce((prev,cur) => prev.includes(cur) ? prev : [...prev,cur],[]);
+    }
+
+    console.log(unique(arr))
+</script>
+</body>
+</html>

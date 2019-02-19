@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+	var arr = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, null,null, NaN, NaN,'NaN', 0, 0, 'a', 'a',{},{}];
+
+
+    function unique(arr) {
+        if (!Array.isArray(arr)) {
+            console.log('type error!')
+            return
+        }
+        var array =[];
+        for(var i = 0; i < arr.length; i++) {
+            if( !array.includes( arr[i]) ) {//includes 检测数组是否有某个值
+                array.push(arr[i]);
+            }
+        }
+        return array
+    }
+
+    console.log(unique(arr))
+</script>
+</body>
+</html>

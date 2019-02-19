@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+	var arr = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, null,null, NaN, NaN,'NaN', 0, 0, 'a', 'a',{},{}];
+
+    function unique(arr) {
+        if (!Array.isArray(arr)) {
+        	return false;
+        }
+        arr = arr.sort();
+	    var uniArr= [arr[0]];
+	    for (var i = 1; i < arr.length; i++) {
+		    if (arr[i] !== arr[i-1]) {
+				uniArr.push(arr[i]);
+		    }
+	    }
+	    return uniArr;
+    }
+
+    console.log(unique(arr))
+</script>
+</body>
+</html>
